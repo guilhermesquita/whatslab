@@ -1,4 +1,6 @@
 import Header from './components/Header/Header';
+import Chat from './components/Chat/Chat'
+import Message from './components/Message/Message';
 import { GlobalStyle } from './globalStyle'
 import {Main} from './style'
 
@@ -7,6 +9,8 @@ function App() {
     <Main>
       <GlobalStyle/>
       <Header/>
+      <Chat/>
+      <Message/>
     </Main>
   );
 }
