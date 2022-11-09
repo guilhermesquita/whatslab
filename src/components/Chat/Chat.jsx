@@ -1,11 +1,11 @@
 import { MainChatBox } from "./Style"
 
-function ChatBox(){
+function Chat(props){
     return(
         <MainChatBox>
-            <p>Chat</p>
+            <p>{props.messages}</p>
         </MainChatBox>
     )
 }
 
-export default ChatBox
+export default Chat
