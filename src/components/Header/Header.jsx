@@ -3,13 +3,23 @@ import Call from '../../assets/Call.svg'
 import hambuger from '../../assets/hambuger.svg'
 import { Cab, Info, InfoText, Online, Icons, ImgProfile  } from './style';
 
-export default function Header() {
-    return (
-      <Cab>
-        <Info>
+export default function Header(props) {
+
+  function changePerson (e){
+    props.setPerson(e.target.value)
+  }
+
+  return (
+    <Cab>
+      <Info>
           <ImgProfile src='https://picsum.photos/200/300' alt='ima' height={'40px'} width={'40px'}/>
           <InfoText>
-            <h4>Gui</h4>
+            <select value={props.person} onChange={changePerson}>
+              <option selected value='me'>Me</option>
+              <option value='gabriel'>Gabriel</option>
+              <option value='lucas'>Lucas</option>
+              <option value='everson'>Everson</option>
+            </select>
             <Online>online</Online>
           </InfoText>
         </Info>

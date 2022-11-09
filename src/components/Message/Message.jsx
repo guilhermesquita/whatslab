@@ -1,9 +1,10 @@
+/* eslint-disable jsx-a11y/anchor-is-valid */
 import Smiley from '../../assets/Smiley.svg'
 import Paperclip from '../../assets/Paperclip.svg'
 import Microphone from '../../assets/Microphone.svg'
 import { MessageInput, Input, Ftr, Audio } from './Style';
 import { useState } from 'react';
-import Chat from '../Chat/Chat';
+
 
 
 export default function Message(props) {
@@ -17,7 +18,14 @@ export default function Message(props) {
     function enterDown(event){
         if(event.key === "Enter"){
             const messagesCopy = [...props.messages]
-            messagesCopy.push(msg)
+
+            const newPerson = {
+                person: props.person,
+                message: msg
+            }
+
+            messagesCopy.push(newPerson)
+
             props.setMessages(messagesCopy)
             setMsg("")
         }

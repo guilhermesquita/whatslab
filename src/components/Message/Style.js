@@ -10,7 +10,6 @@ export const MessageInput = styled.section `
     background-color: white;
     border-radius: 50px;
     box-shadow:0 4px 8px rgba(0,0,0,0.07);
-    margin-top: 60vh;
 `
 export const Input = styled.input `
     width: 70%;
@@ -26,13 +25,12 @@ export const Div = styled.div`
 
 export const Audio = styled.section `
     background-color: #61C554;
-    height: 8%;
+    height: 100%;
     border-radius: 50px;
     width: 6%;
     display: flex;
     justify-content: center;
     align-items: center;
-    margin-top: 60vh;
     margin-right: 10px;
     :hover{
         cursor: pointer;

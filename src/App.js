@@ -7,14 +7,16 @@ import { useState } from 'react';
 function App() {
 
   const [messages, setMessages] = useState([])
-  console.log(messages)
+  const [person,setPerson] = useState('');
 
   return (
     <Main>
       <GlobalStyle/>
-      <Header/>
-      <Chat messages={messages[messages.length-1]}/>
-      <Message messages={messages} setMessages={setMessages}/>
+      <Header person={person} setPerson={setPerson}/>
+      <Chat 
+        messages={messages}
+      />
+      <Message person={person} messages={messages} setMessages={setMessages}/>  
     </Main>
   );
 }
