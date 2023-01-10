@@ -12,7 +12,7 @@ export default function Header(props) {
   return (
     <Cab>
       <Info>
-          <ImgProfile src='https://picsum.photos/200/300' alt='ima' height={'40px'} width={'40px'}/>
+          <ImgProfile src='https://cdn.pixabay.com/photo/2015/10/05/22/37/blank-profile-picture-973460_1280.png' alt='ima' height={'40px'} width={'40px'}/>
           <InfoText>
             <select value={props.person} onChange={changePerson}>
               <option selected value='me'>Me</option>

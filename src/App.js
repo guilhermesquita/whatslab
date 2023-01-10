@@ -7,15 +7,13 @@ import { useState } from 'react';
 function App() {
 
   const [messages, setMessages] = useState([])
-  const [person,setPerson] = useState('');
+  const [person,setPerson] = useState('me');
 
   return (
     <Main>
       <GlobalStyle/>
       <Header person={person} setPerson={setPerson}/>
-      <Chat 
-        messages={messages}
-      />
+      <Chat messages={messages}/>
       <Message person={person} messages={messages} setMessages={setMessages}/>  
     </Main>
   );
